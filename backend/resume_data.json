@@ -1,0 +1,172 @@
+{
+  "name": "Sali Siemen",
+  "email": "salisiemen891@gmail.com",
+  "phone": "+91 9550797609",
+  "location": "Bapatla, Andhra Pradesh, India",
+  "linkedin": "https://www.linkedin.com/in/sali-siemen",
+  "github": "https://github.com/Chinnu891",
+  "career_objective": "Final-year B.Tech CSE (Cyber Security) student with hands-on experience in cloud-like infrastructure setup, server deployment, and networking. Built and deployed a production-level self-hosted server using public IP, DNS mapping, and port forwarding. Strong understanding of DevOps practices, containerization, and system security. Seeking roles in Cloud Engineering, DevOps, and Infrastructure Management.",
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science & Engineering (Cyber Security)",
+      "institution": "St. Ann's College of Engineering & Technology",
+      "cgpa": "8.54",
+      "period": "2022 - 2026",
+      "expected_graduation": "June 2026"
+    }
+  ],
+  "skills": {
+    "cloud_devops": [
+      "Azure",
+      "AWS",
+      "Docker",
+      "Kubernetes (Basics)",
+      "Server Deployment",
+      "Public IP Setup",
+      "CI/CD (Basic Understanding)"
+    ],
+    "frontend": [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "PHP",
+      "Node.js",
+      "Python",
+      "FastAPI"
+    ],
+    "databases": [
+      "MySQL",
+      "PostgreSQL",
+      "Supabase"
+    ],
+    "networking": [
+      "TCP/IP Basics",
+      "DNS",
+      "Port Forwarding",
+      "Subnetting Basics",
+      "OSI Model"
+    ],
+    "security": [
+      "Cybersecurity Fundamentals",
+      "Ethical Hacking Basics",
+      "Firewall Concepts",
+      "IDS/IPS Basics",
+      "Vulnerability Assessment Basics"
+    ],
+    "languages": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "operating_systems": [
+      "Linux (Ubuntu)",
+      "Windows"
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "Nginx",
+      "Hostinger",
+      "XAMPP"
+    ],
+    "other": [
+      "AI/ML Basics",
+      "Prompt Engineering",
+      "Virtualization",
+      "Kubernetes"
+    ]
+  },
+  "projects": [
+    {
+      "title": "DCode Systems – Self-Hosted Cloud-Based LMS Platform",
+      "description": "Designed and deployed a full-stack Learning Management System (LMS) with authentication and scalable backend services. Transformed a personal system into a production-like cloud server environment. Configured port forwarding, DNS mapping, and public IP exposure for live access. Managed backend deployment using Docker containers and Kubernetes basics. Monitored system availability and handled service uptime.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Docker",
+        "Kubernetes",
+        "Node.js",
+        "HLS.js",
+        "Monaco Editor",
+        "Judge0 API"
+      ],
+      "features": [
+        "Video streaming using HLS.js",
+        "Code editor using Monaco Editor",
+        "Online coding execution using Judge0 API",
+        "Self-hosted on personal computer with public IP and port forwarding"
+      ],
+      "link": "#"
+    },
+    {
+      "title": "Full-Stack Hotel Management System",
+      "description": "End-to-end hotel automation with payments, dashboards, and real-time updates.",
+      "tech": [
+        "React",
+        "PHP",
+        "MySQL",
+        "Razorpay",
+        "Chart.js",
+        "JWT",
+        "WebSockets"
+      ],
+      "features": [
+        "Room booking system",
+        "Payment integration using Razorpay",
+        "Admin dashboard with analytics (Chart.js)",
+        "JWT authentication and WebSockets",
+        "Tally integration for accounting"
+      ],
+      "link": "#"
+    },
+    {
+      "title": "Cyber-Physical System Security for Industry 4.0",
+      "description": "Final Year Project (Ongoing) – CNN-LSTM-based intrusion detection system developed using Python Flask for securing cyber-physical systems in Industry 4.0 environments.",
+      "tech": [
+        "Python",
+        "Flask",
+        "CNN",
+        "LSTM",
+        "Deep Learning"
+      ],
+      "features": [
+        "CNN-LSTM hybrid intrusion detection model",
+        "Real-time anomaly detection for cyber-physical systems",
+        "Targeted at Industry 4.0 security"
+      ],
+      "link": "#"
+    }
+  ],
+  "internship": {
+    "organization": "INCOIS (Indian National Centre for Ocean Information Services), Government of India",
+    "project": "Ocean Data Management",
+    "description": "Worked on Ocean Data Management project handling real-time data processing and visualization.",
+    "tech": [
+      "React",
+      "PHP",
+      "MySQL",
+      "XAMPP"
+    ]
+  },
+  "special_experience": {
+    "title": "Self-Hosted Cloud Setup",
+    "description": "Converted a personal computer into a production-like server. Configured public static IP, implemented port forwarding and domain mapping, hosted applications accessible over the internet, used Nginx and Docker for deployment and system management."
+  },
+  "certifications": [
+    "INCOIS Internship Certification",
+    "APSCHE + SmartBridge – Full Stack Development (MERN)",
+    "iHack Academy – Ethical Hacking (Beginner to Advanced)",
+    "NPTEL (IIT Kharagpur) – Programming in C, Programming in Java",
+    "IIT Bombay – HTML Training, Python 3.4.3 Training (Spoken Tutorial)",
+    "ExcelR & GNITS – AI & Machine Learning National Student Program",
+    "CodeTantra – Python Programming, Java Programming"
+  ]
+}
