@@ -1,5 +1,7 @@
 # 🚀 Sali Siemen — AI Portfolio Website
 
+🌐 **Live Demo:** [https://portfolio-blond-nine-19.vercel.app/](https://portfolio-blond-nine-19.vercel.app/)
+
 An AI-powered personal portfolio website featuring a modern React frontend and a FastAPI backend with an intelligent chat assistant powered by OpenRouter (Mistral 7B).
 
 > **Live Chat Widget:** Ask the AI anything about Sali's projects, skills, or experience — all answers are grounded in real resume data.
