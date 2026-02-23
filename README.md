@@ -83,6 +83,10 @@ OPENROUTER_API_KEY=sk-or-...your-key-here
 #### Start the backend
 
 ```bash
+# Option 1 — simple (same as frontend style)
+npm start
+
+# Option 2 — direct uvicorn
 uvicorn main:app --reload --port 8000
 ```
 
