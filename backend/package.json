@@ -1,0 +1,9 @@
+{
+    "name": "portfolio-backend",
+    "version": "1.0.0",
+    "description": "FastAPI backend for Sali Siemen's AI portfolio",
+    "scripts": {
+        "start": "venv\\Scripts\\uvicorn main:app --reload --port 8000",
+        "start:prod": "venv\\Scripts\\uvicorn main:app --host 0.0.0.0 --port 8000"
+    }
+}
