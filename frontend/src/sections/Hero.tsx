@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
     return (
         <section
             id="hero"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-primary-50/30 dark:from-dark-900 dark:via-dark-800 dark:to-dark-700"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-br from-gray-50 via-white to-primary-50/30 dark:from-dark-900 dark:via-dark-800 dark:to-dark-700"
         >
             {/* Animated background orbs */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
