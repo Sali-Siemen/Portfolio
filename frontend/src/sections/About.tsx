@@ -55,8 +55,12 @@ const About: React.FC = () => {
                             {/* Avatar card */}
                             <div className="relative w-72 h-72 rounded-3xl bg-gradient-to-br from-primary-600 via-primary-500 to-accent-500 flex items-center justify-center shadow-2xl shadow-primary-500/30">
                                 <div className="text-center">
-                                    <div className="text-8xl font-black text-white/90 leading-none">SS</div>
-                                    <div className="text-white/60 text-sm mt-2 font-medium">Sali Siemen</div>
+                                    <img
+                                        src="/favicon.png"
+                                        alt="Sali Siemen"
+                                        className="w-56 h-56 object-contain drop-shadow-2xl mx-auto"
+                                    />
+                                    <div className="text-white/70 text-sm mt-3 font-medium tracking-wide">Sali Siemen</div>
                                 </div>
                             </div>
                             {/* Floating badges */}
