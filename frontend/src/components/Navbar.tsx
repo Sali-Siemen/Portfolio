@@ -36,6 +36,7 @@ const Navbar: React.FC = () => {
             <header className="fixed md:sticky top-0 left-0 right-0 z-50 w-full">
                 {/* ── Glass bar ──────────────────────────────────────────── */}
                 <div
+                    className="w-full"
                     style={{
                         /* Glassmorphism — works on all modern browsers */
                         background: theme === 'dark'
@@ -58,14 +59,14 @@ const Navbar: React.FC = () => {
                         transition: 'box-shadow 0.3s ease, background 0.3s ease',
                     }}
                 >
-                    <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex items-center justify-between h-16">
+                    <nav className="max-w-7xl mx-auto w-full px-5 sm:px-6 lg:px-8">
+                        <div className="flex items-center justify-between h-16 w-full">
 
                             {/* ── Logo ── */}
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                className="flex items-center gap-2.5 cursor-pointer select-none"
+                                className="flex items-center gap-2.5 cursor-pointer select-none shrink-0"
                                 onClick={() => handleNavClick('#hero')}
                             >
                                 <div className="relative">
@@ -115,7 +116,7 @@ const Navbar: React.FC = () => {
                             </div>
 
                             {/* ── Right icons ── */}
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-3 pr-2 sm:pr-0 shrink-0">
                                 {/* Theme toggle */}
                                 <motion.button
                                     whileTap={{ scale: 0.88 }}
