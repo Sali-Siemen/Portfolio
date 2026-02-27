@@ -20,9 +20,8 @@ from pydantic import BaseModel
 # ─────────────────────────────────────────────
 load_dotenv()
 
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
-AI_MODEL = "mistralai/mistral-7b-instruct"
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+AI_MODEL = "gemini-2.5-flash"
 
 # ─────────────────────────────────────────────
 # Load resume data (used as AI context)
@@ -122,7 +121,7 @@ async def health():
         "status": "healthy",
         "resume_loaded": bool(resume_data),
         "ai_model": AI_MODEL,
-        "api_key_set": bool(OPENROUTER_API_KEY),
+        "api_key_set": bool(GEMINI_API_KEY),
     }
 
 
@@ -135,10 +134,10 @@ async def chat(request: ChatRequest):
     Accepts a user message and returns an AI-generated response
     grounded in Sali Siemen's resume data.
     """
-    if not OPENROUTER_API_KEY:
+    if not GEMINI_API_KEY:
         raise HTTPException(
             status_code=503,
-            detail="OpenRouter API key not configured. Set OPENROUTER_API_KEY in your .env file.",
+            detail="Gemini API key not configured. Set GEMINI_API_KEY in your .env file.",
         )
 
     if not request.message.strip():
@@ -146,37 +145,38 @@ async def chat(request: ChatRequest):
 
     # Prepare the API payload
     payload = {
-        "model": AI_MODEL,
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": request.message.strip()},
+        "systemInstruction": {
+            "parts": [{"text": SYSTEM_PROMPT}]
+        },
+        "contents": [
+            {"parts": [{"text": request.message.strip()}]}
         ],
-        "temperature": 0.4,
-        "max_tokens": 500,
+        "generationConfig": {
+            "temperature": 0.4,
+            "maxOutputTokens": 500,
+        }
     }
 
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{AI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+    
     headers = {
-        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json",
-        "HTTP-Referer": "https://salisiemen.dev",  # Optional: your deployed domain
-        "X-Title": "Sali Siemen Portfolio Chat",
     }
 
     try:
         async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
-            res = await client.post(OPENROUTER_BASE_URL, json=payload, headers=headers)
+            res = await client.post(url, json=payload, headers=headers)
             res.raise_for_status()
             data = res.json()
 
-        # Extract the AI reply from OpenRouter's response
-        ai_reply = data["choices"][0]["message"]["content"].strip()
+        ai_reply = data["candidates"][0]["content"]["parts"][0]["text"].strip()
 
         return ChatResponse(response=ai_reply, model=AI_MODEL)
 
     except httpx.HTTPStatusError as e:
         raise HTTPException(
             status_code=502,
-            detail=f"OpenRouter API error: {e.response.status_code} — {e.response.text}",
+            detail=f"Gemini API error: {e.response.status_code} — {e.response.text}",
         )
     except httpx.RequestError as e:
         raise HTTPException(status_code=503, detail=f"Network error: {str(e)}")
