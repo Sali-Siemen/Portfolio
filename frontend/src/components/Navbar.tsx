@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
                             </div>
 
                             {/* ── Right icons ── */}
-                            <div className="flex items-center gap-3 pr-2 sm:pr-0 shrink-0">
+                            <div className="flex items-center gap-3 shrink-0">
                                 {/* Theme toggle */}
                                 <motion.button
                                     whileTap={{ scale: 0.88 }}
@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
                                             ? '1px solid rgba(255,255,255,0.12)'
                                             : '1px solid rgba(0,0,0,0.08)',
                                     }}
-                                    className="w-10 h-10 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all"
+                                    className="w-10 h-10 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all shrink-0 flex-none"
                                 >
                                     <motion.div
                                         key={theme}
@@ -146,7 +146,7 @@ const Navbar: React.FC = () => {
                                 {/* Mobile hamburger */}
                                 <motion.button
                                     whileTap={{ scale: 0.88 }}
-                                    className="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 transition-all"
+                                    className="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 transition-all shrink-0 flex-none"
                                     style={{
                                         background: menuOpen
                                             ? 'rgba(99,102,241,0.15)'
